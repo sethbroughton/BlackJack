@@ -18,22 +18,28 @@ public class Deck {
 	public void buildDeck() {
 
 		String[] suits = {"H","D","S","C"};
-		String[] ranks = {"A","2","3","4","5","6","7","8","9","T","J","Q","K"};
+		String[] ranks = {"1","2","3","4","5","6","7","8","9","10","10","10","10"};
 		for(String suit : suits) {
 			for(String rank : ranks) {
-				Card currentCard = new Card();
-				currentCard.setSuit(suit);
-				currentCard.setRank(rank);
+				Card currentCard = new Card(suit, rank);
 				listOfCards.add(currentCard);
 			}			
 		}
 	}
 	
+	//methods - what do the cards do?
+	
 	public void shuffle() {
 		Collections.shuffle(listOfCards);
 	}
 	
-	
+	public Card deal() {
+		if(listOfCards.size()!=0) {
+			return listOfCards.remove(0);
+		}
+		else {
+			return null;
+		}
+	}
 
-	
 }

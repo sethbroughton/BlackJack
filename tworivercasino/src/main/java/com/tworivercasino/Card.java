@@ -1,6 +1,5 @@
 package com.tworivercasino;
 
-
 public class Card {
 	private String rank;
 	private String suit;
@@ -26,8 +25,9 @@ public class Card {
 	}
 	
 	//constructor
-	public Card(){
-		
+	public Card(String suit, String rank){
+		this.suit = suit;
+		this.rank = rank;
 	}
 	
 	//methods - flip card
@@ -41,7 +41,14 @@ public class Card {
 		}
 	}
 	
-	
-	
+	@Override
+	public String toString() {
+		if(faceUp) {
+			return rank;
+		}
+		else {
+			return "Unknown";
+		}
+	}
 	
 }
