@@ -63,19 +63,25 @@ public class MainTable {
 			} 
 			else {
 				dealerCard1.flipCard();
+				System.out.print("Dealer's Hand: ");
+				for (Card card : dealerHand) {
+					System.out.print(card + ", ");
+				}
 				while (getValue(dealerHand) < 17) {
 					Card dealCard = theDeck.deal();
 					dealCard.flipCard();
+					System.out.print(dealCard + ", ");
 					dealerHand.add(dealCard);
 				}
-				for (Card card : dealerHand) {
-					System.out.print(card + " ");
-				}
-				String result = getValue(dealerHand) >= getValue(myHand) ? "You Lose" : "You win";
+				int dealerTotal = getValue(dealerHand);
+				int myTotal = getValue(myHand);
+				
+				System.out.println("\nDealer's Hand: " + dealerTotal);
+				System.out.println("Your Hand: " + myTotal);
+				String result = (dealerTotal<=21 && dealerTotal>=myTotal) ? "You Lose" : "You Win";
 				System.out.println(result);
 				break;
 			}
-
 		}
 	}
 
