@@ -22,19 +22,9 @@ public class User {
 		this.name = name;
 	}
 	
-	public void setHandValue(int sum) {
-		this.handValue = sum;
-	}
-	
 	//Constructor
 	public User() {
 		
-	}
-	
-	//methods
-	
-	public void hit() {
-
 	}
 
 }

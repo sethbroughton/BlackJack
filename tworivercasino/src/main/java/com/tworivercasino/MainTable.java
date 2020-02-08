@@ -49,7 +49,7 @@ public class MainTable {
 			System.out.println("H or S ?");
 			Scanner input = new Scanner(System.in);
 			String nextMove = input.nextLine();
-			if (nextMove.equals("H")) {
+			if (nextMove.toUpperCase().equals("H")) {
 				Card nextCard = theDeck.deal();
 				nextCard.flipCard();
 				myHand.add(nextCard);
