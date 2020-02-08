@@ -1,3 +1,4 @@
+package com.tworivercasino;
 
 
 public class Card {

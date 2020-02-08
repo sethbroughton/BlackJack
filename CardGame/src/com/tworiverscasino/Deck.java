@@ -1,11 +1,11 @@
-package com.tworiverscasino;
+package 
 
 import java.util.List;
 import java.util.ArrayList;
 import java.util.Collections;
 
 public class Deck {
-	
+
 	public static final int CARDS_IN_DECK = 52;
 	private List<Card> listOfCards = new ArrayList<Card>();
 	
