@@ -97,8 +97,15 @@ public class MainTable {
 	public static int getValue(List<Card> hand) {
 		int sum = 0;
 		for (Card item : hand) {
-			int value = Integer.parseInt(item.getRank());
+			String rank = item.getRank();
+			if(rank.equals("A")) {
+				rank = "11"; 
+			}
+			int value = Integer.parseInt(rank);
 			sum += value;
+		}
+		if(sum>21 && hand.contains("A")){
+			sum -= 10;
 		}
 		return sum;
 	}

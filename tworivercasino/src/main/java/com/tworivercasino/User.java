@@ -16,10 +16,12 @@ public class User {
 	
 	//setters;
 	public void setName() {
+
 		Scanner input = new Scanner(System.in);
 		System.out.print("Please enter your name:");
 		String name = input.nextLine();
 		this.name = name;
+	
 	}
 	
 	//Constructor

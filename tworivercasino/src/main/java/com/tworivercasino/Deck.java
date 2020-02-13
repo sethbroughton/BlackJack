@@ -18,7 +18,7 @@ public class Deck {
 	public void buildDeck() {
 
 		String[] suits = {"H","D","S","C"};
-		String[] ranks = {"1","2","3","4","5","6","7","8","9","10","10","10","10"};
+		String[] ranks = {"A","2","3","4","5","6","7","8","9","10","10","10","10"};
 		for(String suit : suits) {
 			for(String rank : ranks) {
 				Card currentCard = new Card(suit, rank);
