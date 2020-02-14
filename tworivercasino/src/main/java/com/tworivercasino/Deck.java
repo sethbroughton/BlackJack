@@ -5,41 +5,46 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 public class Deck {
-	
-	public static final int CARDS_IN_DECK = 52;
+
 	private List<Card> listOfCards = new ArrayList<Card>();
-	
-	//constructor
-	public Deck(){
+
+	// constructor
+	public Deck() {
 	}
-	
-	//methods
+
+	// methods
 
 	public void buildDeck() {
-
-		String[] suits = {"H","D","S","C"};
-		String[] ranks = {"A","2","3","4","5","6","7","8","9","10","10","10","10"};
-		for(String suit : suits) {
-			for(String rank : ranks) {
-				Card currentCard = new Card(suit, rank);
-				listOfCards.add(currentCard);
-			}			
+		String[] suits = { "H", "D", "S", "C" };
+		String[] ranks = { "A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "10", "10", "10" };
+			for (String suit : suits) {
+				for (String rank : ranks) {
+					Card currentCard = new Card(suit, rank);
+					listOfCards.add(currentCard);
+				}
+			}
 		}
-	}
-	
-	//methods - what do the cards do?
-	
+
+	// methods - what do the cards do?
+
 	public void shuffle() {
 		Collections.shuffle(listOfCards);
 	}
-	
+
 	public Card deal() {
-		if(listOfCards.size()!=0) {
+		if (listOfCards.size() != 0) {
 			return listOfCards.remove(0);
-		}
-		else {
+		} else {
 			return null;
 		}
+	}
+
+	public int numberOfCards(Deck listOfCards) {
+		int counter = 0;
+		for (Card card : listOfCards) {
+			card = card.
+		}
+		return counter;
 	}
 
 }
