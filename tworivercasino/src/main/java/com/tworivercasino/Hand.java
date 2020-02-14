@@ -32,16 +32,18 @@ public class Hand {
 	
 	public static int getValue(List<Card> hand) {
 		int sum = 0;
+		boolean containsA = false;
 		for (Card item : hand) {
 			String rank = item.getRank();
 			if(rank.equals("A")) {
 				rank = "11"; 
+				containsA = true;
 			}
 			int value = Integer.parseInt(rank);
 			sum += value;
 		}
-		if(sum>21 && hand.contains("A")){
-			sum -= 10;
+		if(sum>21 && containsA){
+			sum = sum - 10;
 		}
 		return sum;
 	}
@@ -56,6 +58,14 @@ public class Hand {
 			return player2;
 		}
 
+	public static boolean isSoft(List<Card> hand) {
+		for(Card item : hand) {
+			if(item.isFaceUp() && item.getRank().equals("A")) {
+				return true;
+			}
+		}
+			return false;
+	}
 	}
 	
 

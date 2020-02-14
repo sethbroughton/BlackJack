@@ -7,5 +7,6 @@ public class GameHelper {
 	theDeck.buildDeck();
 	theDeck.shuffle();
 	return theDeck;
+	
 	}
 }

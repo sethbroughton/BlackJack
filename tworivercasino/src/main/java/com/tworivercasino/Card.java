@@ -7,7 +7,12 @@ public class Card {
 	
 	//getter
 	public String getRank() {
+		if(faceUp) {
 		return rank;
+		}
+		else {
+			return "0";
+		}
 	}
 	public String getSuit() {
 		return suit;
