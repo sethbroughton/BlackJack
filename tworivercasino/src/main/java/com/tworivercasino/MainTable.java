@@ -38,6 +38,7 @@ public class MainTable {
 		dealerCard2.flipCard();
 		dealerHand.add(dealerCard2);
 		myHand.remove(dealerCard2);
+		Strategy strat = new Strategy();
 
 		while (true) {
 			System.out.print("Dealer Hand: ");
@@ -50,7 +51,10 @@ public class MainTable {
 					System.out.print(card + " ");
 				}
 				System.out.println();
+				String suggestion= strat.basic(myHand, dealerHand);
 				System.out.println("H or S ?");
+				System.out.println("Recommended: " + suggestion);
+	
 				Scanner input = new Scanner(System.in);
 				String nextMove = input.nextLine();
 				if (nextMove.toUpperCase().equals("H")) {
