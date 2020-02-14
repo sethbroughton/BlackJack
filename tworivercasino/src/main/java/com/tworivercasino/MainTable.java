@@ -13,7 +13,7 @@ public class MainTable {
 		System.out.println("Let's start the Game! \n ");
 		GameHelper game = new GameHelper();
 		Deck theShoe = game.startGame();
-		while (theShoe.length()>10) {
+		
 		List<Card> myHand = new ArrayList<Card>();
 		List<Card> dealerHand = new ArrayList<Card>();
 		
@@ -30,13 +30,13 @@ public class MainTable {
 		Card playerCard2 = theShoe.deal();
 		playerCard2.flipCard();
 		myHand.add(playerCard2);
-		myHand.remove(playerCard2);
 
 		Card dealerCard2 = theShoe.deal();
 		dealerCard2.flipCard();
 		dealerHand.add(dealerCard2);
 		myHand.remove(dealerCard2);
 
+		while(true) {
 		System.out.print("Dealer Hand: ");
 		for (Card card : dealerHand) {
 			System.out.print(card + " ");
@@ -87,4 +87,5 @@ public class MainTable {
 		}
 	}
 
+}
 }

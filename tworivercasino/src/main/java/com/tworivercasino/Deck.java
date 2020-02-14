@@ -6,6 +6,7 @@ import java.util.Collections;
 
 public class Deck {
 
+	private static final int DECK_COUNT = 6;
 	private List<Card> listOfCards = new ArrayList<Card>();
 
 	// constructor
@@ -15,6 +16,7 @@ public class Deck {
 	// methods
 
 	public void buildDeck() {
+		for(int i = 0; i<DECK_COUNT; i++) {
 		String[] suits = { "H", "D", "S", "C" };
 		String[] ranks = { "A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "10", "10", "10" };
 			for (String suit : suits) {
@@ -24,6 +26,7 @@ public class Deck {
 				}
 			}
 		}
+	}
 
 	// methods - what do the cards do?
 
@@ -38,13 +41,9 @@ public class Deck {
 			return null;
 		}
 	}
-
-	public int numberOfCards(Deck listOfCards) {
-		int counter = 0;
-		for (Card card : listOfCards) {
-			card = card.
-		}
-		return counter;
+	
+	public int getNumOfCards() {
+		return listOfCards.size();
 	}
 
 }
