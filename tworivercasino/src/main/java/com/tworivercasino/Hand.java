@@ -1,6 +1,7 @@
 package com.tworivercasino;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class Hand {
@@ -16,18 +17,21 @@ public class Hand {
 	// methods
 
 	public static int getValue(List<Card> hand) {
+		//return max <= 21;
 		int sum = 0;
-		boolean containsA = false;
+		for (Card item : hand) {
+			if (!item.getRank().equals("A")) {
+				int value = Integer.parseInt(item.getRank());
+				sum += value;
+			}
+		}
 		for (Card item : hand) {
 			if (item.getRank().equals("A")) {
-				sum = sum + 11;
-				containsA = true;
-			} else {
-				int value = Integer.parseInt(item.getRank());
-				sum = sum + value;
-			}
-			if (sum > 21 && containsA) {
-				sum = sum - 10;
+				if((sum+11)>21) {
+					sum++;
+				} else {
+					sum += 11;
+				}
 			}
 		}
 		return sum;

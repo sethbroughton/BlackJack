@@ -22,16 +22,18 @@ public class BlackJack {
 		
 		Card playerCard1 = theDeck.deal();
 		playerCard1.flipCard();
-		myHand.remove(playerCard1);
 		myHand.add(playerCard1);
 
 		Card dealerCard1 = theDeck.deal();
 		dealerHand.add(dealerCard1);
-		myHand.remove(dealerCard1);
 
 		Card playerCard2 = theDeck.deal();
 		playerCard2.flipCard();
 		myHand.add(playerCard2);
+		
+		Card dealerCard2 = theDeck.deal();
+		dealerCard2.flipCard();
+		dealerHand.add(dealerCard2);
 		
 		Strategy strat = new Strategy();
 		

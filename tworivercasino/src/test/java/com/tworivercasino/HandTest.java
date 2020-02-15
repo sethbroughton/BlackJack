@@ -68,23 +68,25 @@ public class HandTest {
 	}	
 	
 	@Test
-	public void withAceUnder21() {
+	public void multipleAces() {
 		Hand testHand = new Hand();
 		List<Card> cards = new ArrayList<Card>();
 		Card cardOne = new Card("C", "A");
-		Card cardTwo = new Card("D", "8");
-		Card cardThree = new Card("D", "10");
-		Card cardFour = new Card("D", "A");
+		Card cardTwo = new Card("D", "A");
+		Card cardThree = new Card("D", "A");
+		Card cardFour = new Card("D", "5");
+		Card cardFive = new Card("D", "5");
 		cardOne.flipCard();
 		cardTwo.flipCard();
 		cardThree.flipCard();
 		cardFour.flipCard();
+		cardFive.flipCard();
 		cards.add(cardOne);
 		cards.add(cardTwo);
 		cards.add(cardThree);
 		cards.add(cardFour);
-
-		assertEquals(20, testHand.getValue(cards));
+		cards.add(cardFive);
+		assertEquals(23, testHand.getValue(cards));
 	}
 	
 }
