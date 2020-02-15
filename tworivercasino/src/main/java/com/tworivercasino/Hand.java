@@ -15,20 +15,15 @@ public class Hand {
 
 	// methods
 
-	public static boolean isBusted(List<Card> hand) {
-		return getValue(hand) > 21; 
-	}
-
 	public static int getValue(List<Card> hand) {
 		int sum = 0;
 		boolean containsA = false;
 		for (Card item : hand) {
-			String rank = item.getRank();
-			if (rank.equals("A")) {
+			if (item.getRank().equals("A")) {
 				sum = sum + 11;
 				containsA = true;
 			} else {
-				int value = Integer.parseInt(rank);
+				int value = Integer.parseInt(item.getRank());
 				sum = sum + value;
 			}
 			if (sum > 21 && containsA) {

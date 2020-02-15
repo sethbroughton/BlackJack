@@ -15,6 +15,8 @@ public class MainTable {
 		while (game.theDeck.getNumOfCards() > 100) {
 			game.startPlaying();
 		}
+		
+		System.out.print("Game Over");
 
 	}
 

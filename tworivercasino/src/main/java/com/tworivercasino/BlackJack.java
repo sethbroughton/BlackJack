@@ -56,7 +56,7 @@ public class BlackJack {
 						Card nextCard = theDeck.deal();
 						nextCard.flipCard();
 						myHand.add(nextCard);
-						if (Hand.isBusted(myHand)) {
+						if (Hand.getValue(myHand)>21) {
 							for (Card card : myHand) {
 								System.out.print(card + " ");
 							}
