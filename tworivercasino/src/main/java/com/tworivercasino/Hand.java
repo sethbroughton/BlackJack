@@ -37,7 +37,7 @@ public class Hand {
 		return sum;
 	}
 
-	public User split(List<Card> hand) {
+	/*public void split(List<Card> hand) {
 		// if(hand.get(0).equals(hand.get(1)) && hand.size() == 2) {
 		User player2 = new User();
 		Card secondCard = hand.get(1);
@@ -45,7 +45,7 @@ public class Hand {
 		List<Card> newHand = new ArrayList<Card>();
 		newHand.add(secondCard);
 		return player2;
-	}
+	}*/
 
 	public static boolean isSoft(List<Card> hand) {
 		for (Card item : hand) {
